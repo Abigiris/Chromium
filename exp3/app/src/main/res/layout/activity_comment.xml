@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity">
+
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="185dp"
+        android:layout_height="82dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginRight="92dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="80dp"
+        android:text="Are you satisfied with this page?"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/good_button"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="170dp"
+        android:onClick="addGoodNum"
+        android:text="Good"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bad_button"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="170dp"
+        android:onClick="addBadNum"
+        android:text="Bad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/comment_edit_text"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="240dp"
+        android:ems="10"
+        android:hint="Please input your comment."
+        android:inputType="text|textShortMessage|textLongMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="310dp"
+        android:background="#99beca"
+        android:onClick="submitComment"
+        android:text="submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/canel_button"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="310dp"
+        android:background="?attr/colorButtonNormal"
+        android:onClick="cancelComment"
+        android:text="@android:string/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/submit_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/good_num_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="5dp"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/good_button" />
+
+    <TextView
+        android:id="@+id/bad_num_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:layout_marginRight="130dp"
+        android:layout_marginTop="5dp"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bad_button" />
+
+    <TextView
+        android:id="@+id/all_comments_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="380dp"
+        android:text="All Comments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/comment1_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#ade9e9"
+        android:text="There's some useful information."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/all_comments_text_view" />
+
+    <TextView
+        android:id="@+id/comment2_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#ade9e9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment1_text_view" />
+
+    <Button
+        android:id="@+id/like1_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/btn_star_big_on"
+        android:onClick="addLike1Num"
+        app:layout_constraintStart_toEndOf="@+id/comment1_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/all_comments_text_view" />
+
+    <TextView
+        android:id="@+id/like1_num_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="1"
+        app:layout_constraintStart_toEndOf="@+id/like1_button"
+        app:layout_constraintTop_toBottomOf="@+id/all_comments_text_view" />
+
+</android.support.constraint.ConstraintLayout>
