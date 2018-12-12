@@ -38,7 +38,8 @@ public class CommentActivity extends AppCompatActivity {
         TextView goodText = (TextView) findViewById(R.id.good_num_text_view);
         String nowGoodString = goodText.getText().toString();
         int nowGoodInt = Integer.parseInt(nowGoodString);
-        nowGoodInt++;
+        //nowGoodInt++;
+		nowGoodInt = nowGoodInt + 1;
         nowGoodString = nowGoodInt + "";
         goodText.setText(nowGoodString);
     }
